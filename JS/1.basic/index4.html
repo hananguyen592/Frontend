@@ -1,0 +1,77 @@
+<!-- Practice 4: Tạo mẫu Number: ô input + button Result, nếu không nhập gì mà click button Result thì in ra, hiện validate message và alert là "Ô này bắt buộc, vui lòng nhập", nếu nhập kí tự không phải số thì in ra, hiện validate message và alert "Bạn đang nhập chữ, vui lòng chỉ nhập số", nếu nhập số thì kiểm tra số đó, nếu là số dương thì in ra, hiện validate message và alert là "số đó là số dương", số âm thì in ra, hiện validate message và alert là "số đó là số âm", nếu là số 0 thì in ra, hiện validate message và alert là "số này là số 0" -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .validate-message {
+        color: green;
+        display: none;
+      }
+    </style>
+    <style>
+      .alert-result {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label style="color: blue; display: inline">Number:</label>
+      <input type="text" name="number" class="number" />
+      <label class="validate-message">Required field!</label>
+      <button class="result">Result</button>
+    </div>
+    <div class="alert-result"></div>
+    <script>
+      var inputNumber = document.querySelector(".number");
+      console.log(inputNumber);
+      var buttonResult = document.querySelector(".result");
+      console.log(buttonResult);
+      var validateMessage = document.querySelector(".validate-message");
+      var alertResult = document.querySelector(".alert-result");
+
+      buttonResult.addEventListener("click", function () {
+        console.log("click Result button");
+        validateMessage.style.display = "none";
+        alertResult.innerHTML = "";
+        //   innerHTML -> set lại content cho element
+        var number = inputNumber.value;
+        console.log(number + " được nhập");
+        // gán giá trị của number là giá trị được nhập
+        if (!number) {
+          console.log("ô này bắt buộc, vui lòng nhập");
+          validateMessage.style.display = "inline";
+          validateMessage.innerHTML = "Ô này bắt buộc, vui lòng nhập";
+          //   innerHTML -> set lại content cho element
+          alertResult.innerHTML = "Ô này bắt buộc, vui lòng nhập";
+        } else if (isNaN(number)) {
+          console.log("bạn đang nhập chữ, vui lòng chỉ nhập số");
+          validateMessage.style.display = "inline";
+          validateMessage.innerHTML = "Bạn đang nhập chữ, vui lòng chỉ nhập số";
+          alertResult.innerHTML = "Bạn đang nhập chữ, vui lòng chỉ nhập số";
+        } else {
+          if (number > 0) {
+            console.log(number + " là số dương");
+            validateMessage.style.display = "inline";
+            validateMessage.innerHTML = number + " là số dương";
+            alertResult.innerHTML = number + " là số dương";
+          } else if (number < 0) {
+            console.log(number + " là số âm");
+            validateMessage.style.display = "inline";
+            validateMessage.innerHTML = number + " là số âm";
+            alertResult.innerHTML = number + " là số âm";
+          } else {
+            console.log("số này là số 0");
+            validateMessage.style.display = "inline";
+            validateMessage.innerHTML = "số này là số 0";
+            alertResult.innerHTML = "số này là số 0";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

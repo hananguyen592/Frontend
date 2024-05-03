@@ -1,0 +1,75 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.alert {
+  width: 760px;
+  height: 58px;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.alert-text {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  padding-left: 8px;
+}
+
+.alert-primary {
+  background-color: #cfe2ff;
+  border-color: #b6d4fe;
+}
+
+.alert-primary-text {
+  color: #084298;
+}
+
+.icon-primary {
+  color: #084298;
+}
+
+.alert-success {
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+}
+
+.alert-success-text {
+  color: #0f5132;
+}
+
+.icon-success {
+  color: #0f5132;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  border-color: #ffecb5;
+}
+
+.alert-warning-text {
+  color: #664d03;
+}
+
+.icon-warning {
+  color: #664d03;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+}
+
+.alert-danger-text {
+  color: #842029;
+}
+
+.icon-danger {
+  color: #842029;
+}

@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+
+  background-color: #f8f9fa;
+}
+
+.header {
+  height: 56px;
+  background-color: #212529;
+}
+
+.banner {
+  height: 424px;
+  background-color: #fff;
+
+  padding: 96px 633.5px 96px 633.5px;
+}
+
+.banner-content {
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-title {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #212529;
+
+  margin-bottom: 8px;
+
+  background-color: transparent;
+
+  display: flex;
+  justify-content: center;
+}
+
+.banner-text {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #6c757d;
+
+  background-color: transparent;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+  width: 636px;
+}
+
+.banner-button {
+  background-color: transparent;
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.banner-button-main {
+  padding: 6px 12px 6px 12px;
+  background-color: #0d6efd;
+
+  border-radius: 0.25rem;
+  border: 1px solid #0d6efd;
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+
+  margin-right: 4px;
+}
+
+.banner-button-secondary {
+  padding: 6px 12px 6px 12px;
+  background-color: #6c757d;
+
+  border-radius: 0.25rem;
+  border: 1px solid #6c757d;
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.card-block {
+  height: 1166px;
+
+  margin: 48px 295.5px 48px 295.5px;
+
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-row {
+  height: 378px;
+  background-color: transparent;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-item {
+  width: 421.328px;
+  background-color: #fff;
+
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.075);
+}
+
+.card-thumbnail {
+  width: 419.328px;
+  height: 220px;
+
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.card-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+
+  padding: 16px;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+
+  padding: 0px 16px 16px 16px;
+
+  justify-content: space-between;
+}
+
+.card-button {
+  display: flex;
+  justify-content: flex-start;
+
+  border: 1px solid #6c757d;
+  border-radius: 0.25rem;
+}
+
+.card-button-view {
+  padding: 4px 8px 4px 8px;
+
+  border-right: 1px solid #6c757d;
+
+  font-size: 14px;
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.card-button-edit {
+  padding: 4px 8px 4px 8px;
+
+  font-size: 14px;
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.card-time {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.card-button-view:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+.card-button-edit:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+.footer {
+  height: 148px;
+  background-color: #fff;
+  padding: 48px 303.5px 48px 303.5px;
+}
+
+.footer-content {
+  background-color: transparent;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-text {
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6c757d;
+}
+
+.footer-text-primary {
+  background-color: transparent;
+  margin-bottom: 4px;
+}
+
+.footer-text-secondary {
+  background-color: transparent;
+  display: flex;
+}
+
+.footer-text-secondary-1st {
+  background-color: transparent;
+}
+
+.footer-text-secondary-2nd {
+  background-color: transparent;
+}
+
+.footer-link-primary {
+  color: #0d6efd;
+  background-color: transparent;
+}
+
+.footer-link-secondary {
+  color: #0d6efd;
+  background-color: transparent;
+}
+
+.footer-button {
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0d6efd;
+}

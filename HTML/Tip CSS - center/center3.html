@@ -1,0 +1,35 @@
+<!-- TIP 3: Using flexbox (display: flex, justify-content: center, align-items: center) -->
+<style>
+  .parent-3 {
+    display: flex; /* enable flexbox layout */
+    justify-content: center; /* center child elements of parent class along the main axis (horizontally) */
+    align-items: center; /* center child elements of parent class along the cross axis (vertically) */
+    height: 300px;
+    background-color: grey;
+  }
+</style>
+<div class="parent-3">
+  <div class="centered-3">
+    <p>This is a centered paragraph,.</p>
+  </div>
+</div>
+
+<!-- Practice 3: Adjust the paragraph with 10 words in white to the center of the purple block with height 200px perfectly (horizontally and vertically) -->
+<style>
+  .parent-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: purple;
+    color: white;
+  }
+</style>
+<div class="parent-c">
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+      exercitationem.
+    </p>
+  </div>
+</div>

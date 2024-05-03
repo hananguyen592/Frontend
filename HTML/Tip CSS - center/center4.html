@@ -1,0 +1,56 @@
+<!-- TIP 4: Using position: absolute; and transform -->
+<style>
+  .parent-4 {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Just for demonstration */
+    background-color: yellow;
+  }
+
+  .centered-4 {
+    position: absolute; /* the child div"centered" is positioned absolutely within the div"parent" */
+    top: 50%; /* the distance from the top edge of the child div"centered" to the top edge of the div"parent" is 50% the height of the div"parent" */
+    left: 50%; /* the distance from the left edge of the child div"centered" to the left edge of the div"parent" is 50% the width of the div"parent" */
+    /* top: 50%, left: 50% -> the top-left corner of the child div"centered" is placed at the center point of the div"parent" */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* move the element away from the top-left corner (if positive number) or back to the top-left corner (if negative number) by certain percentage of its own width and height
+    /* translate(-50%, -50%) -> moves the element back by half (50%) of its own width and height, effectively centering it both horizontally and vertically within the parent container. */
+    width: 50%; /* control the width of the centered element compared to the width of the parent container (Adjust width as needed)*/
+    background-color: pink;
+  }
+</style>
+<div class="parent-4">
+  <div class="centered-4">
+    <p>This is a centered paragraph.</p>
+  </div>
+</div>
+
+<!-- Practice 4: Adjust a small orange block containg paragraph with 20 words to the center of the large light blue block with height 200px perfectly (horizontally and vertically), the width of the small block is 20% the width of the large block -->
+<style>
+  .parent-d {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: lightblue;
+  }
+
+  .centered-d {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    background-color: orange;
+  }
+</style>
+<div class="parent-d">
+  <div class="centered-d">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+      molestias dicta cum doloribus eum totam sapiente aperiam quod voluptate
+      distinctio!
+    </p>
+  </div>
+</div>

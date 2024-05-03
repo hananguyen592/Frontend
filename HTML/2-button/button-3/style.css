@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.button {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+
+  border: 1px solid;
+  border-radius: 0.25rem;
+
+  background-color: transparent;
+
+  line-height: 1.5;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  cursor: pointer;
+}
+
+.button-outline-primary {
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+
+.button-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.button-outline-success {
+  border-color: #198754;
+  color: #198754;
+}
+
+.button-outline-danger {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.button-outline-warning {
+  border-color: #ffc107;
+  color: #ffc107;
+}
+
+.button-outline-info {
+  border-color: #0dcaf0;
+  color: #0dcaf0;
+}
+
+.button-outline-light {
+  border-color: #f8f9fa;
+  color: #f8f9fa;
+}
+
+.button-outline-dark {
+  border-color: #212529;
+  color: #212529;
+}
+
+.button-outline-primary:hover {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: #fff;
+}
+
+.button-outline-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+.button-outline-success:hover {
+  background-color: #198754;
+  border-color: #198754;
+  color: #fff;
+}
+
+.button-outline-danger:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+
+.button-outline-warning:hover {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #000;
+}
+
+.button-outline-info:hover {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #000;
+}
+
+.button-outline-light:hover {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  color: #000;
+}
+
+.button-outline-dark:hover {
+  background-color: #212529;
+  border-color: #212529;
+  color: #fff;
+}
+
+.button-outline-primary:focus {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
+}
+
+.button-outline-secondary:focus {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.5);
+}
+
+.button-outline-success:focus {
+  background-color: #198754;
+  border-color: #198754;
+  color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.5);
+}
+
+.button-outline-danger:focus {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);
+}
+
+.button-outline-warning:focus {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #000;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
+}
+
+.button-outline-info:focus {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #000;
+  box-shadow: 0 0 0 0.25rem rgba(13, 202, 240, 0.5);
+}
+
+.button-outline-light:focus {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  color: #000;
+  box-shadow: 0 0 0 0.25rem rgba(248, 249, 250, 0.5);
+}
+
+.button-outline-dark:focus {
+  background-color: #212529;
+  border-color: #212529;
+  color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.5);
+}

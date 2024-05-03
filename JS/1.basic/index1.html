@@ -1,0 +1,46 @@
+<!-- Practice 1: Kiểm tra một số, nếu số đó > 1 thì in ra số đó là số lớn, ngược lại thì in ra số đó là số nhỏ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var number = 1;
+      if (number > 1) {
+        console.log(number + " là số lớn");
+      } else {
+        console.log(number + " là số nhỏ");
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 1. Trong () sau if phải truyền (input) là biểu thức so sánh, như == > < !=(khác) để so sánh 2 giá trị khác nhau, như biến - biến, biến - giá trị  -->
+<!-- 2. Kết quả (output) của biểu thức so sánh luôn trả về True hoặc False  -->
+<!-- 3. console.log: số + chuỗi -> in ra kết quả nối chuỗi, ví dụ (number + " là số lớn") còn số + số -> in ra kết quả là số, ví dụ: (number + number) hay (number + 1) chẳng hạn -->
+
+<!-- Practice 2: Kiểm tra một số, nếu số đó > 0 thì in ra số đó là số dương, < 0 thì in ra số đó là số âm, = 0 thì in ra số này là số 0 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var number = 9;
+      if (number > 0) {
+        console.log(number + " là số dương");
+      } else if (number < 0) {
+        console.log(number + " là số âm");
+      } else {
+        console.log("số này là số 0");
+      }
+    </script>
+  </body>
+</html>

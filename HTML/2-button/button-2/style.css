@@ -1,0 +1,68 @@
+.button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 0.25rem;
+
+  background-color: #0d6efd;
+  border: 1px solid transparent;
+
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  margin-right: 5px;
+
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.button:focus {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+  box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+}
+
+.button-link {
+  width: 54.42px;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  margin-right: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.button-link:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.button-link:focus {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+  box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+}
+
+.button-primary {
+  width: 73.5px;
+}
+
+.button-input {
+  width: 63.2px;
+}
+
+.button-submit {
+  width: 76.05px;
+}
+
+.button-reset {
+  width: 64.05px;
+}

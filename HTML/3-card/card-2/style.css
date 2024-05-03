@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+}
+
+.card {
+  width: 288px;
+  height: 498px;
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card-image-top {
+  height: 180px;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 20px;
+  color: #212529;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #212529;
+  line-height: 1.5;
+}
+
+.list-group {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.list-group-item {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  font-size: 16px;
+  color: #212529;
+  line-height: 1.5;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.hide-border-butom {
+  border-bottom: none;
+}
+
+.card-link {
+  display: flex;
+  padding: 16px;
+  font-size: 16px;
+}
+
+.card-link-primary {
+  color: #0d6efd;
+}
+
+.card-link-secondary {
+  margin-left: 16px;
+  color: #0d6efd;
+}
+
+.card-link-primary:hover {
+  color: #0a58ca;
+  text-decoration: none;
+}
+
+.card-link-secondary:hover {
+  color: #0a58ca;
+  text-decoration: none;
+}

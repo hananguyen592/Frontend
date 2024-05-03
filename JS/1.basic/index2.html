@@ -1,0 +1,41 @@
+<!-- Practice 2: Tạo mẫu Number: ô input + button Result, nếu không nhập gì mà click button Result thì in ra "Ô này bắt buộc, vui lòng nhập", nếu nhập số thì kiểm tra số đó, nếu số đó > 1 thì in ra số đó là số lớn, ngược lại thì in ra số đó là số nhỏ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label>Number:</label>
+      <input type="text" name="number" class="number" />
+      <button class="result">Result</button>
+    </div>
+    <script>
+      var inputNumber = document.querySelector(".number");
+      console.log(inputNumber);
+      // ".number" phải có dấu chấm ở trước để hiểu là tìm class="number", nếu bỏ dấu chấm thì sẽ hiểu là tìm HTML tag name "number" mà tag name này ko vali, nên sẽ trả về null
+
+      var buttonResult = document.querySelector(".result");
+      console.log(buttonResult);
+      buttonResult.addEventListener("click", function () {
+        console.log("click Result button");
+        // không phải bắt sự kiện input vì lúc click button Result thì ô input đã có giá trị rồi
+
+        var number = inputNumber.value;
+        // console.log(number + " được nhập");
+        if (!number) {
+          console.log("Ô này bắt buộc, vui lòng nhập");
+        } else {
+          if (number > 1) {
+            console.log(number + " là số lớn");
+          } else {
+            console.log(number + " là số nhỏ");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
