@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Button to trigger modal  -->
+    <button id="openModalBtn" type="button" class="btn btn-primary">
+      Vertically centered modal
+    </button>
+    <!-- Triggered modal  -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <i
+            type="button"
+            class="btn-x fa-solid fa-xmark"
+            data-bs-dismiss="modal"
+          ></i>
+        </div>
+        <div class="modal-body">
+          <p class="modal-body-text">This is a vertically centered modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-close">Close</button>
+          <button id="btnSave" type="button" class="btn btn-save-changes">
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="modalBackdrop" class="modal-backdrop"></div>
+    <script>
+      // Select the components
+      var myButton = document.getElementById("openModalBtn");
+      var modal = document.getElementById("myModal");
+      var backdrop = document.getElementById("modalBackdrop");
+      // var backdrop = document.querySelector(".modal-backdrop");
+      var closeButtonPrimary = modal.querySelector(".btn-x");
+      var closeButtonSecondary = modal.querySelector(".btn-close");
+      var saveChangesButton = document.getElementById("btnSave");
+
+      // Add function openModal
+      function openModal() {
+        modal.style.display = "block";
+        backdrop.style.display = "block";
+      }
+
+      // Add function closeModal
+      function closeModal() {
+        modal.style.display = "none";
+        backdrop.style.display = "none";
+      }
+
+      // Add event listener to execute function openModal
+      myButton.addEventListener("click", openModal);
+
+      // Add event listener to execute function closeModal
+      closeButtonPrimary.addEventListener("click", closeModal);
+      closeButtonSecondary.addEventListener("click", closeModal);
+
+      // Add event listener to closeModal when clicking outside ?!
+      document.addEventListener("click", function (event) {
+        if (event.target === backdrop) {
+          closeModal();
+        }
+      });
+
+      // backdrop.addEventListener("click", closeModal);
+
+      // Add event listener to navigate to a page when clicking saveChangesButton ?!
+      saveChangesButton.addEventListener("click", function () {
+        window.location.href =
+          "https://getbootstrap.com/docs/5.0/components/modal/";
+      });
+    </script>
+  </body>
+</html>

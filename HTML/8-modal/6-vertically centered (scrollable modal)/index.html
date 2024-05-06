@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Button to trigger modal  -->
+    <button id="openModalBtn" type="button" class="btn btn-primary">
+      Launch demo modal
+    </button>
+    <!-- Triggered modal  -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <i
+            type="button"
+            class="btn-x fa-solid fa-xmark"
+            data-bs-dismiss="modal"
+          ></i>
+        </div>
+        <div class="modal-body">
+          <p class="modal-body-text">
+            This is some placeholder content to show a vertically centered
+            modal. We've added some extra copy here to show how vertically
+            centering the modal works when combined with scrollable modals. We
+            also use some repeated line breaks to quickly extend the height of
+            the content, thereby triggering the scrolling. When content becomes
+            longer than the prefedined max-height of modal, content will be
+            cropped and scrollable within the modal.
+            <br />
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
+            reprehenderit tenetur nihil, minima alias vitae suscipit rem! Nihil
+            vitae autem, maxime mollitia distinctio voluptas repudiandae
+            pariatur eligendi velit id omnis impedit atque laborum provident
+            placeat dicta libero dolorem nesciunt quidem illo quam dolorum.
+            Incidunt dolore veritatis magnam, ex ullam dolorum sint doloribus
+            ipsam velit! Corporis accusantium cumque rerum modi explicabo
+            reprehenderit alias velit doloribus laudantium consequuntur,
+            repellendus temporibus excepturi perspiciatis dolore deserunt,
+            ducimus aut qui. Repudiandae ipsam nulla tempora sunt. Ex enim quos
+            aliquam distinctio repudiandae fugiat consectetur eius optio
+            voluptate quasi hic similique asperiores eos alias unde at
+            exercitationem, nulla sapiente ipsa quia? Quod aperiam ipsa, magnam
+            possimus quidem neque quis assumenda laborum sapiente nesciunt
+            excepturi, nihil voluptatem tempora non soluta quisquam quos ipsam,
+            quibusdam quas mollitia quaerat harum. Ullam rem vero fugiat,
+            possimus dolore sapiente animi atque assumenda. Dicta, sed explicabo
+            accusantium expedita quisquam aut optio provident excepturi quis quo
+            corporis laborum iure? Minus fuga accusamus, laborum nisi
+            praesentium, quam magni aperiam hic perferendis odit, cupiditate
+            possimus temporibus aspernatur. Exercitationem blanditiis accusamus
+            autem dicta? Commodi, at est! Eligendi a expedita labore perferendis
+            veniam sit, neque dolorem vel rem atque exercitationem tempora fuga
+            quam doloremque similique quas impedit nostrum animi at accusamus
+            beatae iste ex! Hic, error. Nihil maxime obcaecati deleniti
+            assumenda voluptatum harum esse natus vero rerum minus
+            necessitatibus, placeat dicta sint laborum velit! Vero
+            necessitatibus officia non ab placeat dicta facilis maxime,
+            consequuntur minus laboriosam assumenda sunt excepturi, impedit
+            atque. Ad corporis, mollitia, quaerat fugit accusamus quasi
+            dignissimos modi non libero provident sequi nobis laboriosam. Eos
+            voluptate possimus, corporis beatae facilis rem eveniet repellendus
+            quia dignissimos molestiae doloremque repudiandae minus voluptates
+            sed architecto quae, earum, aspernatur in officia inventore ut illo
+            explicabo assumenda aut. Aperiam, libero delectus! Fugit excepturi
+            nobis et minus quis, exercitationem cupiditate quasi odit.
+            <br />
+            Just like that.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-close">Close</button>
+          <button id="btnSave" type="button" class="btn btn-save-changes">
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="modalBackdrop" class="modal-backdrop"></div>
+    <script>
+      // Select the components
+      var myButton = document.getElementById("openModalBtn");
+      var modal = document.getElementById("myModal");
+      var backdrop = document.getElementById("modalBackdrop");
+      // var backdrop = document.querySelector(".modal-backdrop");
+      var closeButtonPrimary = modal.querySelector(".btn-x");
+      var closeButtonSecondary = modal.querySelector(".btn-close");
+      var saveChangesButton = document.getElementById("btnSave");
+
+      // Add function openModal
+      function openModal() {
+        modal.style.display = "block";
+        backdrop.style.display = "block";
+      }
+
+      // Add function closeModal
+      function closeModal() {
+        modal.style.display = "none";
+        backdrop.style.display = "none";
+      }
+
+      // Add event listener to execute function openModal
+      myButton.addEventListener("click", openModal);
+
+      // Add event listener to execute function closeModal
+      closeButtonPrimary.addEventListener("click", closeModal);
+      closeButtonSecondary.addEventListener("click", closeModal);
+
+      // Add event listener to closeModal when clicking outside ?!
+      document.addEventListener("click", function (event) {
+        if (event.target === backdrop) {
+          closeModal();
+        }
+      });
+
+      // backdrop.addEventListener("click", closeModal);
+
+      // Add event listener to navigate to a page when clicking saveChangesButton ?!
+      saveChangesButton.addEventListener("click", function () {
+        window.location.href =
+          "https://getbootstrap.com/docs/5.0/components/modal/";
+      });
+    </script>
+  </body>
+</html>

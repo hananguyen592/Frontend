@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Button to trigger modal  -->
+    <button id="openModalBtn" type="button" class="btn btn-primary">
+      Launch demo modal
+    </button>
+    <!-- Triggered modal  -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <i
+            type="button"
+            class="btn-x fa-solid fa-xmark"
+            data-bs-dismiss="modal"
+          ></i>
+        </div>
+        <div class="modal-body">
+          <p class="modal-body-text">
+            This is some placeholder content to show the scrolling behavior for
+            modals. We use repeated line breaks to demonstrate how content can
+            exceed minimum inner height, thereby showing inner scrolling. When
+            content becomes longer than the prefedined max-height of modal,
+            content will be cropped and scrollable within the modal.
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, fuga
+            tenetur asperiores aperiam saepe maxime sequi doloribus? Delectus
+            voluptates ipsa inventore cupiditate, quisquam quam eveniet officiis
+            accusantium veniam ea aspernatur nobis facilis nam quod eaque
+            laborum ab impedit? Tempore mollitia atque cupiditate natus ullam
+            ad, quis consequatur officia, dignissimos est facilis minus dolore
+            quod amet facere ea provident distinctio earum modi impedit
+            doloremque eum qui. Ex placeat mollitia quaerat dolore? Praesentium
+            excepturi quas amet tempore consequuntur omnis deleniti hic ipsa
+            quod! Vero possimus ut nihil eum voluptates debitis pariatur,
+            eligendi unde necessitatibus quibusdam a odit? Labore placeat itaque
+            ea quod impedit fugit. Dicta eveniet cum, veniam ducimus animi quod,
+            voluptate culpa ad itaque ab nesciunt accusantium quasi dolorum
+            consequatur quisquam. Pariatur porro eligendi magni doloremque quasi
+            voluptatibus aperiam aliquid cum eum excepturi ad nemo consequatur
+            corporis, dolorem veritatis cumque rem temporibus facilis ab.
+            Ducimus, neque obcaecati dicta inventore ipsam fugiat vel nulla
+            cupiditate illo veniam iure alias fugit a quibusdam expedita
+            repellat nihil culpa? Asperiores sunt in sequi eligendi corrupti eum
+            unde, quidem dolore magni maxime similique obcaecati autem provident
+            totam quos! Iusto eveniet nihil minima rem, dicta voluptatum? Facere
+            voluptates voluptatibus commodi cumque dolorem doloremque adipisci
+            neque ea vero repellendus, ab distinctio, alias quod earum, autem
+            obcaecati iure. Laborum voluptatibus nihil porro modi excepturi
+            incidunt nobis natus quasi maxime, doloremque cum velit voluptatum?
+            Repellat cum iusto, dolor repellendus blanditiis veniam recusandae,
+            quia fugiat tempora incidunt sint provident pariatur maiores
+            perspiciatis facere esse aperiam necessitatibus excepturi id alias
+            enim mollitia harum! Perferendis optio, facere, ex saepe beatae
+            harum, exercitationem esse consequuntur sunt laudantium
+            reprehenderit corporis id sed totam suscipit? Maxime qui
+            exercitationem quo deserunt incidunt iure voluptatum neque omnis
+            voluptatibus saepe? Fugit tempore pariatur quidem corrupti rem aut?
+            Dolore sequi reiciendis sapiente eum consequuntur dolorem, magnam
+            tempore officiis impedit enim deleniti odit ab nobis suscipit.
+            Commodi esse eligendi quos dignissimos quas officia iusto voluptas
+            voluptates praesentium! Voluptatibus dolore eos omnis accusamus
+            suscipit doloribus laborum repudiandae amet repellat temporibus
+            debitis cum, maxime, eveniet optio voluptatum quis. Optio distinctio
+            quos exercitationem nostrum esse porro cumque iure deserunt vitae
+            quidem totam error fugiat ducimus dolorem tempore repellendus odit
+            at itaque magnam placeat veniam atque, tenetur laudantium
+            voluptatem? Odit ex ducimus cumque assumenda cum molestiae?
+            Consequatur ea expedita consequuntur officia nihil quo sint,
+            provident temporibus eos possimus iure necessitatibus aliquam
+            aliquid soluta animi eveniet nulla recusandae dolor ex id? Sunt cum
+            fuga vel assumenda harum ipsum numquam adipisci veritatis. Et
+            adipisci magni reprehenderit, at eveniet eaque aliquam perspiciatis
+            ab, eius distinctio qui consequuntur voluptatibus ullam non dicta
+            eos fuga quis eum iure vero quasi quas! Mollitia explicabo
+            accusamus, numquam veniam beatae adipisci quis eaque?
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-close">Close</button>
+          <button id="btnSave" type="button" class="btn btn-save-changes">
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="modalBackdrop" class="modal-backdrop"></div>
+    <script>
+      // Select the components
+      var myButton = document.getElementById("openModalBtn");
+      var modal = document.getElementById("myModal");
+      var backdrop = document.getElementById("modalBackdrop");
+      // var backdrop = document.querySelector(".modal-backdrop");
+      var closeButtonPrimary = modal.querySelector(".btn-x");
+      var closeButtonSecondary = modal.querySelector(".btn-close");
+      var saveChangesButton = document.getElementById("btnSave");
+
+      // Add function openModal
+      function openModal() {
+        modal.style.display = "block";
+        backdrop.style.display = "block";
+      }
+
+      // Add function closeModal
+      function closeModal() {
+        modal.style.display = "none";
+        backdrop.style.display = "none";
+      }
+
+      // Add event listener to execute function openModal
+      myButton.addEventListener("click", openModal);
+
+      // Add event listener to execute function closeModal
+      closeButtonPrimary.addEventListener("click", closeModal);
+      closeButtonSecondary.addEventListener("click", closeModal);
+
+      // Add event listener to closeModal when clicking outside ?!
+      document.addEventListener("click", function (event) {
+        if (event.target === backdrop) {
+          closeModal();
+        }
+      });
+
+      // backdrop.addEventListener("click", closeModal);
+
+      // Add event listener to navigate to a page when clicking saveChangesButton ?!
+      saveChangesButton.addEventListener("click", function () {
+        window.location.href =
+          "https://getbootstrap.com/docs/5.0/components/modal/";
+      });
+    </script>
+  </body>
+</html>

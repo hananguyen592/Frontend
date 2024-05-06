@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Button to trigger modal  -->
+    <button id="openModalBtn" type="button" class="btn btn-primary">
+      Launch demo modal
+    </button>
+    <!-- Triggered modal  -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <i
+            type="button"
+            class="btn-x fa-solid fa-xmark"
+            data-bs-dismiss="modal"
+          ></i>
+        </div>
+        <div class="modal-body">
+          <h4 class="modal-body-heading">Popover in a modal</h4>
+          <div class="modal-body-text">
+            <p>This</p>
+            <div class="tooltip-primary-container">
+              <button
+                type="button"
+                id="tooltip-primary-trigger"
+                class="tooltip-primary-trigger"
+                data-tooltip="Tooltip"
+              >
+                button
+              </button>
+              <div role="tooltip" id="tooltip-primary" class="tooltip-primary">
+                <h5 class="tooltip-primary-title">Popover title</h5>
+                <p class="tooltip-primary-content">
+                  Popover body content is set in this attribute
+                </p>
+              </div>
+            </div>
+            <p>triggers a popover on click.</p>
+          </div>
+          <hr class="modal-body-line" />
+          <h4 class="modal-body-heading">Tooltips in a modal</h4>
+          <div class="modal-body-text">
+            <div class="tooltip-secondary-container">
+              <a
+                class="tooltip-secondary-trigger"
+                data-tooltip="Tooltip"
+                href="https://getbootstrap.com/docs/5.0/components/tooltips/"
+                >This link</a
+              >
+              <div
+                role="tooltip"
+                id="tooltip-secondary"
+                class="tooltip-secondary"
+              >
+                Tooltip
+              </div>
+            </div>
+            <p class="word-between-links">and</p>
+            <div class="tooltip-container">
+              <a
+                class="tooltip-secondary-trigger"
+                data-tooltip="Tooltip"
+                href="https://getbootstrap.com/docs/5.0/components/tooltips/"
+                >that link</a
+              >
+              <div
+                role="tooltip"
+                id="tooltip-secondary"
+                class="tooltip-secondary"
+              >
+                Tooltip
+              </div>
+            </div>
+            <p class="word-after-link">have tooltips on hover.</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-close">Close</button>
+          <button id="btnSave" type="button" class="btn btn-save-changes">
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalBackdrop" class="modal-backdrop"></div>
+    <script>
+      // Select the components
+      var myButton = document.getElementById("openModalBtn");
+      var modal = document.getElementById("myModal");
+      var backdrop = document.getElementById("modalBackdrop");
+      // var backdrop = document.querySelector(".modal-backdrop");
+      var closeButtonPrimary = modal.querySelector(".btn-x");
+      var closeButtonSecondary = modal.querySelector(".btn-close");
+      var saveChangesButton = document.getElementById("btnSave");
+
+      // Add function openModal
+      function openModal() {
+        modal.style.display = "block";
+        backdrop.style.display = "block";
+      }
+
+      // Add function closeModal
+      function closeModal() {
+        modal.style.display = "none";
+        backdrop.style.display = "none";
+      }
+
+      // Add event listener to execute function openModal
+      myButton.addEventListener("click", openModal);
+
+      // Add event listener to execute function closeModal
+      closeButtonPrimary.addEventListener("click", closeModal);
+      closeButtonSecondary.addEventListener("click", closeModal);
+
+      // Add event listener to closeModal when clicking outside ?!
+      document.addEventListener("click", function (event) {
+        if (event.target === backdrop) {
+          closeModal();
+        }
+      });
+
+      // Phần bật tắt tooltip ?!
+      // Add event listener to navigate to a page when clicking saveChangesButton ?!
+      saveChangesButton.addEventListener("click", function () {
+        window.location.href =
+          "https://getbootstrap.com/docs/5.0/components/modal/";
+      });
+
+      // Select the components (tooltip primary)
+      var buttonTriggerPopover = document.getElementById(
+        "tooltip-primary-trigger"
+      );
+      var tooltipPrimary = document.getElementById("tooltip-primary");
+
+      // Add function openTooltipPrimary
+      function openTooltipPrimary() {
+        tooltipPrimary.style.display = "block";
+      }
+
+      // Add function closeTooltipPrimary
+      function closeTooltipPrimary() {
+        tooltipPrimary.style.display = "none";
+      }
+
+      // Add event listener to execute function openTooltipPrimary
+      buttonTriggerPopover.addEventListener("click", openTooltipPrimary);
+
+      // Add event listener to execute function closeTooltipPrimary
+      buttonTriggerPopover.addEventListener("click", closeTooltipPrimary);
+    </script>
+  </body>
+</html>
